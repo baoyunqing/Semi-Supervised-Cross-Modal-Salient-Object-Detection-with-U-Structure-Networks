@@ -41,22 +41,11 @@ import time
 from unet import U2NET, UNET, BASNet
 from basics import normPRED, f1score, PRF1Scores, compute_IoU, compute_mae
 
-'''
-from ray import tune
-from ray.tune import CLIReporter
-from ray.tune.schedulers import ASHAScheduler
-'''
-#writer = SummaryWriter('./log')
-
 
 def _upsample_like(src,tar):
     if(src.shape[2:] != tar.shape[2:]):
         src = F.upsample(src,size=tar.shape[2:],mode='bilinear')
     return src
-
-# import pytorch_ssim
-# import pytorch_iou
-# import pytorch_dice
 
 def get_im_gt_name_list(im_dirs, gt_dirs, flag='train'):
     img_name_list = []
@@ -222,9 +211,8 @@ def main():
 
     ## define the model
     print("---define model...")
-    #net = build_model(base_model_cfg='vgg')
     net = BASNet(3,1)
-    net.load_state_dict(torch.load(model_dir + '/itr_28500_traLoss_0.1971_traTarLoss_0.0163_valLoss_1.6457_valTarLoss_0.182_maxF1_0.8844_mae_0.0409_time_0.011197.pth'),strict = True)
+    #net.load_state_dict(torch.load(model_dir + '/itr_28500_traLoss_0.1971_traTarLoss_0.0163_valLoss_1.6457_valTarLoss_0.182_maxF1_0.879_mae_0.0409_time_0.011197.pth'),strict = True)
     '''
     for k,v in net.named_parameters():
         if k == 'self.bert':
@@ -278,15 +266,6 @@ def main():
 
             # forward + backward + optimize
             ds = net(inputs_v,captions)
-            
-            '''
-            img = ds[0].cpu().detach().numpy()
-            img = img[0].squeeze(0)
-            print(captions)
-            cv2.imshow('test',img)
-            cv2.waitKey(0)
-            cv2.imwrite('example.jpg',img)
-            '''
             
             loss2, loss = muti_bce_loss_fusion(ds, labels_v)
 
