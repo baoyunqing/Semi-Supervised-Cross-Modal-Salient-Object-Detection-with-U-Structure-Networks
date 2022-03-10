@@ -7,3 +7,5 @@ python main.py
 running the code for testing
 
 python test.py
+
+not finished yet
