@@ -52,41 +52,6 @@ from basics import normPRED, f1score, PRF1Scores, compute_IoU, compute_mae
 from skimage.transform import rescale, resize
 from networks.poolnet import build_model, weights_init
 
-def hook_func(module, input_, output):
-    """
-    Hook function of register_forward_hook
-
-    Parameters:
-    -----------
-    module: module of neural network
-    input: input of module
-    output: output of module
-    """
-    image_name = get_image_name_for_hook(module)
-    data = output.clone().detach()
-    data = data.permute(1, 0, 2, 3)
-    vutil.save_image(data, image_name, pad_value=0.5)
-    
-def get_image_name_for_hook(module):
-    """
-    Generate image filename for hook function
-
-    Parameters:
-    -----------
-    module: module of neural network
-    """
-    INSTANCE_FOLDER = './visualization'
-    os.makedirs(INSTANCE_FOLDER, exist_ok=True)
-    base_name = str(module).split('(')[0]
-    index = 0
-    image_name = '.'  # '.' is surely exist, to make first loop condition True
-    while os.path.exists(image_name):
-        index += 1
-        image_name = os.path.join(
-            INSTANCE_FOLDER, '%s_%d.png' % (base_name, index))
-        
-    return image_name
-
 
 def _upsample_like(src,tar):
     if(src.shape[2:] != tar.shape[2:]):
@@ -209,17 +174,7 @@ def main():
 
 
     val_im_dirs = ['dataset/DUTS/DUTS-TE/im',]
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/BIG_im_gt/test_val_cmb/im']
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/hr-sod/val/im']#'../dataset_from_sinet/TestDataset/COD10K/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CPD1K/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CAMO/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CHAMELEON/Imgs']
     val_gt_dirs = ['dataset/DUTS/DUTS-TE/gt',]
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/BIG_?im_gt/test_val_cmb/gt']#,
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/hr-sod/val/gt']#'../dataset_from_sinet/TestDataset/COD10K/GT',
-                    #'../dataset_from_sinet/TestDataset/CPD1K/GT',
-                    #'../dataset_from_sinet/TestDataset/CAMO/GT',
-                    #'../dataset_from_sinet/TestDataset/CHAMELEON/GT']
 
     ## extracting the training image and ground truth pathes from the given directories
     print("=====Extracting Validation image and ground truth=====")
