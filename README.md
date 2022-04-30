@@ -15,6 +15,7 @@ DataSet downloading:
 DUTS: http://saliencydetection.net/duts/#org3aad434
 DUT-OMRON:  http://saliencydetection.net/dut-omron/
 HKU-IS: https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0
+https://drive.google.com/drive/folders/1-0PpfntpFjxIGqNxeOXKlSj_Pr8_c0Jh?usp=sharing
 
 and put all the training and testing data in the folder of dataset
 
