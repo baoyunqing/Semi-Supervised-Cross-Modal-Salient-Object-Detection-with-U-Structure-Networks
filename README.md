@@ -8,4 +8,4 @@ running the code for testing
 
 python test.py
 
-not finished yet
+not finished until the paper is published
