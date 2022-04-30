@@ -16,4 +16,6 @@ DUTS: http://saliencydetection.net/duts/#org3aad434
 DUT-OMRON:  http://saliencydetection.net/dut-omron/
 HKU-IS: https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0
 
+and put all the training and testing data in the folder of dataset
+
 I will release all the codes and datasets after the paper is published
