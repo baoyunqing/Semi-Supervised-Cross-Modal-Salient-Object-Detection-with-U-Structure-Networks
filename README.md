@@ -20,9 +20,8 @@ captions for DUT-OMRON: https://drive.google.com/file/d/1pL2myBRvgD3GPC20Y1beAh8
 HKU-IS: https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0
 captions for HKU-IS: https://drive.google.com/file/d/11A8LDEPy8Kmr-M37vZp-7ZaI4qA_XZwG/view?usp=sharing
 
-downloading pretrained weights of unet and u2net: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing
+put all the training and testing data in the folder of dataset.
 
+downloading pretrained weights of unet and u2net: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing and you could put them in the folder of saved_models.
 
-and put all the training and testing data in the folder of dataset
-
-I will release all the codes and datasets after the paper is published
+I will release all the codes and datasets after the paper is published.
