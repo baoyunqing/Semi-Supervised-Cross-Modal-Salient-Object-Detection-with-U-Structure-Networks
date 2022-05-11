@@ -1,6 +1,6 @@
 # cross-model-SOD
 
-environment: python 3.6 + pytorch 1.10.2
+The code is based on python3.6
 
 runing the code for training:
 
