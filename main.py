@@ -166,29 +166,9 @@ def main():
 
     ## configure the  train and validation datasets
     tra_im_dirs =  ['dataset/DUTS/DUTS-TR/im']
-                   # '../dataset_from_sinet/TrainDataset/CPD1K/Imgs',
-                   # '../dataset_from_sinet/TrainDataset/CAMO/Imgs']
     tra_gt_dirs =  ['dataset/DUTS/DUTS-TR/gt']
-                    #['dataset/DUTS/DUTS-TR/gt']
-                    # '../dataset_from_sinet/TrainDataset/CPD1K/GT',
-                    #'../dataset_from_sinet/TrainDataset/CAMO/GT']
-
     val_im_dirs = ['dataset/DUTS/DUTS-TE/im']
-                  #['dataset/DUTS/DUTS-TE/im',]
-                  #'../dataset/SOD/img']
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/BIG_im_gt/test_val_cmb/im']
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/hr-sod/val/im']#'../dataset_from_sinet/TestDataset/COD10K/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CPD1K/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CAMO/Imgs',
-                    #'../dataset_from_sinet/TestDataset/CHAMELEON/Imgs']
     val_gt_dirs = ['dataset/DUTS/DUTS-TE/gt']
-                  #['dataset/DUTS/DUTS-TE/gt',]
-                  #'../dataset/SOD/gt']
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/BIG_?im_gt/test_val_cmb/gt']#,
-                  # '/data3/xuebin/HRSOD/CascadePSP/data/hr-sod/val/gt']#'../dataset_from_sinet/TestDataset/COD10K/GT',
-                    #'../dataset_from_sinet/TestDataset/CPD1K/GT',
-                    #'../dataset_from_sinet/TestDataset/CAMO/GT',
-                    #'../dataset_from_sinet/TestDataset/CHAMELEON/GT']
 
     ## extracting the training image and ground truth pathes from the given directories
     print("=====Extracting Training image and ground truth=====")
