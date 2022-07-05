@@ -22,6 +22,4 @@ captions for HKU-IS: https://drive.google.com/file/d/11A8LDEPy8Kmr-M37vZp-7ZaI4q
 
 put all the training and testing data in the folder of dataset.
 
-downloading pretrained weights of unet and u2net: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing and you could put them in the folder of saved_models.
-
-I will release all the codes and datasets after the paper is published.
+downloading pretrained weights of unet, u2net and basnet: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing and you could put them in the folder of saved_models.
