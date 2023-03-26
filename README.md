@@ -22,7 +22,7 @@ HKU-IS: https://drive.google.com/open?id=0BxNhBO0S5JCRQ1N6V25VeVh6cHc&authuser=0
 
 put all the training and testing data in the folder of dataset.
 
-downloading pretrained weights of unet, u2net and basnet: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing and you could put them in the folder of saved_models.
+downloading pretrained weights of unet, u2net and basnet: https://drive.google.com/drive/folders/1K6HOoMUb8lRcmYhVw7ZvmfshZzQzPEAg?usp=sharing
 
 The link of the paper: https://arxiv.org/abs/2208.04361
 
